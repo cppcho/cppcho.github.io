@@ -1,0 +1,48 @@
+---
+layout: default
+---
+<div class="about">
+  <header class="about__header">
+    <h1>{{ page.title | escape }}</h1>
+  </header>
+  <header class="about__content">
+    {{ content }}
+  </header>
+  {% assign experience = site.data.about.experience %}
+  {% if experience %}
+  <div class="about__experience">
+    <h3>Work Experience</h3>
+    {% for exp in experience %}
+    <div class="about__experience-item">
+      <div class="row about__experience-item-header">
+        <div class="col-sm">
+          <p>
+            <span class="about__experience-item--title">{{ exp.title | escape }}<span>{% if exp.company %}, <span class="about__experience-item--company">{{ exp.company | escape }}<span>{% endif %}{% if exp.location %} - {{ exp.location | escape }} {% endif %}
+          </p>
+        </div>
+        <div class="col-sm">
+          <p class="text-sm-right">{{ exp.period_from | escape }}{% if exp.period_to %}{{ exp.period_to | prepend: " - " | escape }}{% endif %}</p>
+        </div>
+      </div>
+      {% if exp.items %}
+      <div class="row about__experience-item-content">
+        <ul>
+          {% for item in exp.items %}
+          <li>{{ item | escape }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endif %}
+    </div>
+    {% endfor %}
+  </div>
+  {% endif %}
+  <div class="about__projects">
+    <h3>Projects</h3>
+
+  </div>
+  <div class="about__education">
+    <h3>Education</h3>
+
+  </div>
+</div>

@@ -1,7 +1,7 @@
 ---
-layout: page
+layout: about
 title: About
 permalink: /about/
 ---
 
-Hi! I am a programmer living in Hong Kong.
+I'm a programmer from Hong Kong. I am experienced  with a number of web technologies, specialized primarily in PHP and JavaScript.
