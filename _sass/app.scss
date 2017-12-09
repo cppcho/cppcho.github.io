@@ -6,6 +6,13 @@ h6 {
   color: $tint-color;
 }
 
+.main-content {
+  @extend .py-5;
+  a {
+    text-decoration: underline;
+  }
+}
+
 .brand--accent {
   color: $tint-color;
 }
@@ -25,4 +32,20 @@ h6 {
 .contact {
   @extend .text-muted;
   font-size: $font-size-base * 0.9;
+  a {
+    @extend .text-muted;
+    text-decoration: none;
+  }
+}
+
+.books__list {
+  @extend .list-unstyled;
+  li {
+    @extend .mb-4;
+  }
+}
+
+.bools__read-item-year {
+  @extend .font-weight-bold;
+  @extend .mb-3;
 }

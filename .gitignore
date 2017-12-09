@@ -2,3 +2,4 @@ _site
 .sass-cache
 .jekyll-metadata
 yarn-error.log
+_config/api.yml

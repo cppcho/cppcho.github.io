@@ -1,0 +1,39 @@
+---
+layout: default
+---
+<div class="books">
+  <div class="books__content">
+    {{ content }}
+  </div>
+  {% if site.data.books.reading %}
+  <div class="books__reading">
+    <h6>Reading</h6>
+    <ul class="books__list">
+      {% for book in site.data.books.reading %}
+      <li>
+        {% include book_name.html book=book %}
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
+  {% if site.data.books.read %}
+  <div class="books__read">
+    <h6>Read</h6>
+    {% for r in site.data.books.read %}
+      {% if r.items %}
+      <div class="books__read-item">
+        <div class="bools__read-item-year">{{ r.year }}</div>
+        <ul class="books__list">
+        {% for book in r.items %}
+          <li>
+            {% include book_name.html book=book %}
+          </li>
+        {% endfor %}
+        </ul>
+      </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+  {% endif %}
+</div>

@@ -15,7 +15,12 @@ exclude:
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
+  - tasks/
   - README.md
+  - yarn-error.log
+  - yarn.lock
+  - package.json
+  - Rakefile
 
 plugins:
   - jekyll-seo-tag

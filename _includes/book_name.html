@@ -1,0 +1,7 @@
+{%- assign book = include.book -%}
+{%- if book.url -%}<a href="{{ book.url }}">{%- endif -%}
+<span class="book__title">{{ book.title }}</span>
+{%- if book.url -%}</a>{%- endif -%}
+{%- if book.authors -%}
+<span class="book__authors">{{ book.authors | join ", " | prepend: " &mdash; " }}</span>
+{%- endif -%}
