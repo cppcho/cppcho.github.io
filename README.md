@@ -7,6 +7,6 @@
 bundle install
 jekyll serve
 
-# Update book list
+# Update book list (from _config/books.yml)
 rake books
 ```
