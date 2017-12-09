@@ -19,8 +19,20 @@ experience:
     company: theOrigo Ltd.
     location: Hong Kong
     items:
-      - Backend development of websites for clients such as local universities.
+      - Backend development of websites for clients such as the University of Hong Kong.
       - Developed iPhone and iPad applications based on the PSD from designers.
   - title: Previous Experiences
     items:
       - Summer intern for a local hospital, working on a web application for managing patients' X-ray photographs.
+projects:
+  - name: Pinboard++
+    description: >
+      A Chrome extension for <a href="https://pinboard.in" target="_blank" rel="noopener noreferrer">Pinboard</a>.
+    link: https://chrome.google.com/webstore/detail/pinboard++-for-pinboard/kmbofkenjncfapkighkijhmeelkgnldo
+education:
+  - name: B.Sc. in Computer Science & Mathematics
+    # institution: Hong Kong University of Science and Technology
+    year: '2010'
+    items:
+      - Graduated in Hong Kong University of Science and Technology with First Class Honors.
+

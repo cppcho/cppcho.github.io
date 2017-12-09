@@ -2,47 +2,106 @@
 layout: default
 ---
 <div class="about">
-  <header class="about__header">
-    <h1>{{ page.title | escape }}</h1>
-  </header>
-  <header class="about__content">
-    {{ content }}
-  </header>
+
+  {{ content }}
+
   {% assign experience = site.data.about.experience %}
   {% if experience %}
-  <div class="about__experience">
-    <h3>Work Experience</h3>
+  <div class="about__item-wrapper">
+    <h6>Experience</h6>
     {% for exp in experience %}
-    <div class="about__experience-item">
-      <div class="row about__experience-item-header">
+    <div class="about__item">
+      <div class="row about__item-heading">
         <div class="col-sm">
-          <p>
-            <span class="about__experience-item--title">{{ exp.title | escape }}<span>{% if exp.company %}, <span class="about__experience-item--company">{{ exp.company | escape }}<span>{% endif %}{% if exp.location %} - {{ exp.location | escape }} {% endif %}
-          </p>
+          <div>
+            <span>{{ exp.title | escape }}<span>
+            {%- if exp.company -%}
+            <span>{{ exp.company | escape | prepend: ', ' }}<span>
+            {%- endif -%}
+            {%- if exp.location -%}
+            <span class="about__item-heading--light">{{ exp.location | escape | prepend: " &ndash; " }}</span>
+            {%- endif -%}
+          </div>
         </div>
         <div class="col-sm">
-          <p class="text-sm-right">{{ exp.period_from | escape }}{% if exp.period_to %}{{ exp.period_to | prepend: " - " | escape }}{% endif %}</p>
+          <div class="text-sm-right">
+            {{ exp.period_from | escape }}
+            {%- if exp.period_to -%}
+              {{ exp.period_to | escape | prepend: " &ndash; " }}
+            {%- endif -%}
+          </div>
         </div>
       </div>
-      {% if exp.items %}
-      <div class="row about__experience-item-content">
-        <ul>
-          {% for item in exp.items %}
-          <li>{{ item | escape }}</li>
-          {% endfor %}
-        </ul>
+      <div class="row">
+        <div class="col">
+          <ul class="list-unstyled">
+            {% for item in exp.items %}
+            <li>{{ item | escape }}</li>
+            {% endfor %}
+          </ul>
+        </div>
       </div>
-      {% endif %}
     </div>
     {% endfor %}
   </div>
   {% endif %}
-  <div class="about__projects">
-    <h3>Projects</h3>
-
+  {% assign projects = site.data.about.projects %}
+  {% if projects %}
+  <div class="about__item-wrapper">
+    <h6>Projects</h6>
+    {% for proj in projects %}
+    <div class="about__item">
+      <div>
+          {%- if proj.link -%}
+        <a href="{{ proj.link }}" target="_blank" rel="noopener noreferrer">
+        {%- endif -%}
+          <span>{{ proj.name | escape }}</span>
+        {%- if proj.link -%}
+        </a>
+        {%- endif -%}
+        {%- if proj.description -%}
+        <span>{{ proj.description | prepend: ': ' }}</span>
+        {%- endif -%}
+      </div>
+      <ul class="list-unstyled">
+        {% for item in proj.items %}
+        <li>{{ item | escape }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endfor %}
   </div>
-  <div class="about__education">
-    <h3>Education</h3>
-
+  {% endif %}
+  {% assign education = site.data.about.education %}
+  {% if education %}
+  <div class="about__item-wrapper">
+    <h6>Education</h6>
+    {% for edu in education %}
+    <div class="about__item">
+      <div class="row about__item-heading">
+        <div class="col-sm">
+          {{ edu.name | escape }}
+        </div>
+        <div class="col-sm">
+          <div class="text-sm-right">
+            {{ edu.year | escape }}
+          </div>
+        </div>
+      </div>
+      <ul class="list-unstyled">
+        {% if edu.institution %}
+        <li>{{ edu.institution | escape }}</li>
+        {% endif %}
+        {% for item in edu.items %}
+        <li>{{ item | escape }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endfor %}
+  </div>
+  {% endif %}
+  <div class="about__interest">
+    <h6>Interests</h6>
+    Reading, Programming, Studying Japanese, Running, Gaming
   </div>
 </div>

@@ -1,0 +1,23 @@
+h6 {
+  @extend .text-uppercase;
+  @extend .font-weight-bold;
+  @extend .pt-2;
+  @extend .mb-3;
+  color: $tint-color;
+}
+
+.brand--accent {
+  color: $tint-color;
+}
+
+.about__item {
+  @extend .mb-4;
+}
+
+.about__item-heading {
+  @extend .font-weight-bold;
+}
+
+.about__item-heading--light {
+  @extend .font-weight-light;
+}

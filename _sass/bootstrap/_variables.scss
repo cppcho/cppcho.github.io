@@ -1,0 +1,11 @@
+$tint-color: #715ab1;
+
+$container-max-widths: (
+  sm: 540px,
+  md: 768px,
+);
+
+$font-size-base: 0.875rem;
+$font-weight-base: 300;
+
+$link-color: darken($tint-color, 5%);

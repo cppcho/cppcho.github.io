@@ -4,4 +4,4 @@ title: About
 permalink: /about/
 ---
 
-I'm a programmer from Hong Kong. I am experienced  with a number of web technologies, specialized primarily in PHP and JavaScript.
+A software developer from Hong Kong, with a focus on web technologies including React and PHP.
