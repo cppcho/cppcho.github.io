@@ -3,7 +3,10 @@
 ## Commands
 
 ``` bash
+# Setup development environment
+bundle install
 jekyll serve
-jekyll build
-jekyll clean
+
+# Update book list
+rake books
 ```
