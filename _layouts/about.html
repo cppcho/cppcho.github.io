@@ -59,8 +59,8 @@ layout: default
     {% for proj in projects %}
     <div class="about__item">
       <div>
-          {%- if proj.link -%}
-        <a href="{{ proj.link }}" target="_blank" rel="noopener noreferrer">
+        {%- if proj.link -%}
+        <a href="{{ proj.link }}">
         {%- endif -%}
           <span>{{ proj.name | escape }}</span>
         {%- if proj.link -%}

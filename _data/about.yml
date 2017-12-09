@@ -29,7 +29,7 @@ experience:
 projects:
   - name: Pinboard++
     description: >
-      A Chrome extension for <a href="https://pinboard.in" target="_blank" rel="noopener noreferrer">Pinboard</a>.
+      A Chrome extension for <a href="https://pinboard.in">Pinboard</a>.
     link: https://chrome.google.com/webstore/detail/pinboard++-for-pinboard/kmbofkenjncfapkighkijhmeelkgnldo
 education:
   - name: B.Sc. in Computer Science & Mathematics
