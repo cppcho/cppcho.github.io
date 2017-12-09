@@ -21,6 +21,7 @@ exclude:
   - yarn.lock
   - package.json
   - Rakefile
+  - LICENSE
 
 plugins:
   - jekyll-seo-tag
