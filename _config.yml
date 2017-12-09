@@ -17,8 +17,15 @@ exclude:
   - vendor/ruby/
   - README.md
 
-# Custom vars
+plugins:
+  - jekyll-seo-tag
+
 title: Patrick Cho
+description: Patrick Cho's Website
+url: http://cppcho.com
+author: Patrick Cho
+
+# Custom vars
 email: cppcho.hk@gmail.com
 github_username: cppcho
 linkedin_username: cppcho
