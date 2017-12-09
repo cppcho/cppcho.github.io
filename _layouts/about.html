@@ -3,7 +3,14 @@ layout: default
 ---
 <div class="about">
 
-  {{ content }}
+  <div class="about__item">
+    {{ content }}
+    {% if site.data.about.introduction %}
+    <p>
+      {{ site.data.about.introduction | escape }}
+    </p>
+    {% endif %}
+  </div>
 
   {% assign experience = site.data.about.experience %}
   {% if experience %}
