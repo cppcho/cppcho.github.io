@@ -19,11 +19,9 @@ exclude:
 
 # Custom vars
 title: Patrick Cho
-author: Patrick Cho
 email: cppcho.hk@gmail.com
-description:
-twitter_username:
-github_username:
+github_username: cppcho
+linkedin_username: cppcho
 
 header_pages:
 # - about.md

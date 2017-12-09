@@ -1,5 +1,18 @@
 <footer>
   <div class="container">
+    <div class="contact">
+      <ul class="list-unstyled">
+        {% if site.email %}
+        <li>{% include icon-email.html username=site.email %}</li>
+        {% endif %}
+        {% if site.github_username %}
+        <li>{% include icon-github.html username=site.github_username %}</li>
+        {% endif %}
+        {% if site.linkedin_username %}
+        <li>{% include icon-linkedin.html username=site.linkedin_username %}</li>
+        {% endif %}
+      </ul>
+    </div>
     <p class="text-center text-muted">
       <small>Powered by <a href="https://jekyllrb.com/">Jekyll</a>.</small>
     </p>

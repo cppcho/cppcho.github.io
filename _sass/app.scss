@@ -21,3 +21,8 @@ h6 {
 .about__item-heading--light {
   @extend .font-weight-light;
 }
+
+.contact {
+  @extend .text-muted;
+  font-size: $font-size-base * 0.9;
+}
