@@ -36,5 +36,21 @@ education:
     # institution: Hong Kong University of Science and Technology
     year: '2010'
     items:
-      - Graduated in Hong Kong University of Science and Technology with First Class Honors.
+      - Graduated from the Hong Kong University of Science and Technology with First Class Honors.
+skills:
+  strong:
+    - React
+    - ES6
+    - PHP
+    - CodeIgniter
+    - Git
+  knowledgeable:
+    - Redux
+    - Ruby
+    - MySQL
+    - Objective-C
+  learning:
+    - Ruby on Rails
+    - TypeScript
+    - GraphQL
 

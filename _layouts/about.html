@@ -107,8 +107,34 @@ layout: default
     {% endfor %}
   </div>
   {% endif %}
-  <div class="about__interest">
+  {% assign skills = site.data.about.skills %}
+  {% if skills %}
+  <div class="about__item-wrapper">
+    <h6>Skills</h6>
+    <div class="about__item">
+      {% if skills.strong %}
+      <div class="row">
+        <div class="col-4 col-sm-3 col-md-2">Strong: </div>
+        <div class="col">{{ skills.strong | join: ", " }}</div>
+      </div>
+      {% endif %}
+      {% if skills.knowledgeable %}
+      <div class="row">
+        <div class="col-4 col-sm-3 col-md-2">Knowledgeable: </div>
+        <div class="col">{{ skills.knowledgeable | join: ", " }}</div>
+      </div>
+      {% endif %}
+      {% if skills.learning %}
+      <div class="row">
+        <div class="col-4 col-sm-3 col-md-2">Learning: </div>
+        <div class="col">{{ skills.learning | join: ", " }}</div>
+      </div>
+      {% endif %}
+    </div>
+  </div>
+  {% endif %}
+  <div class="about__item-wrapper">
     <h6>Interests</h6>
-    Reading, Programming, Studying Japanese, Running, Gaming
+    Reading, Programming, Learning Japanese, Running, Gaming
   </div>
 </div>
