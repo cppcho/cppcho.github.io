@@ -1,7 +1,7 @@
 require 'yaml'
 require 'amazon/ecs'
 
-THOTTLE_RATE = 3
+THOTTLE_RATE = 10
 
 output_path = File.join(__dir__, '../_data/books.yml')
 api_config_path = File.join(__dir__, '../_config/api.yml')
