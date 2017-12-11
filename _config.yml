@@ -27,7 +27,7 @@ plugins:
   - jekyll-seo-tag
 
 title: Patrick Cho
-description: My personal website
+description: Hi! I am a software developer from Hong Kong, and this is my personal website.
 url: http://cppcho.com
 author: Patrick Cho
 
