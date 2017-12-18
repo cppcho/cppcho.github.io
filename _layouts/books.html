@@ -19,11 +19,10 @@ layout: default
   {% endif %}
   {% if site.data.books.read %}
   <div class="books__read">
-    <h6>Read</h6>
     {% for r in site.data.books.read %}
       {% if r.items %}
       <div class="books__read-item">
-        <div class="bools__read-item-year">{{ r.year }}</div>
+        <h6>Read in {{ r.year }}</h6>
         <ul class="books__list">
         {% for book in r.items %}
           <li>
